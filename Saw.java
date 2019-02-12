@@ -19,22 +19,22 @@ public class Saw {
     protected int oilReservoir;
 
     public Saw() {
-        this("Still-14", 1800, 9, 4, 3999);
+        this("Still-14", 1800, 9, 4, 3999, 300, 2);
     }
 
     public Saw(String name, int power, int wheeling, int weight, int price) {
+        this(name, power, wheeling, weight, price, 300, 2);
+    }
+
+    public Saw(String name, int power, int wheeling, int weight, int price, int chainSpeed, int oilReservoir) {
         this.name = name;
         this.power = power;
         this.wheeling = wheeling;
         this.weight = weight;
         this.price = price;
-    }
-
-    public Saw(String name, int power, int wheeling, int weight, int price, int chainSpeed, int oilReservoir) {
-        this(name, power, wheeling, weight, price);
         this.chainSpeed = chainSpeed;
         this.oilReservoir = oilReservoir;
-
+        Saw.sawQuantity++;
     }
 
     //@Override
@@ -50,12 +50,12 @@ public class Saw {
                 '}';
     }
 
-    public static void printStaticSawQuontity(int sawQuantity) {
+    public static void printStaticSawQuontity() {
         System.out.println("The saw quantity is " + sawQuantity);
     }
 
     public void printSawQuontity() {
-        Saw.printStaticSawQuontity(2);
+        Saw.printStaticSawQuontity();
     }
 
     public void resetValues(String name, int power, int wheeling, int weight, int price, int chainSpeed, int oilReservoir) {
