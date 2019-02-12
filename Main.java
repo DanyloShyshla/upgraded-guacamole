@@ -10,8 +10,8 @@ public class Main {
         System.out.println(sawSecond);
         System.out.println(sawThird);
 
-        sawSecond.printStaticSawQuontity(3);
-        Saw.printStaticSawQuontity(2);
+        sawSecond.printStaticSawQuontity();
+        Saw.printStaticSawQuontity();
 
     }
 }
