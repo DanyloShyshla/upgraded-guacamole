@@ -4,9 +4,9 @@ public class Saw {
 
     String name;
 
-    public int power;
+    private int power;
 
-    public int wheeling;
+    private int wheeling;
 
     private int weight;
 
